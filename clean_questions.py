@@ -1,9 +1,12 @@
 import sys
 import csv
 
+source_file = str(sys.argv[1])
+result_file = str(sys.argv[2])
+
 #file_name = "english_clean.csv"
-cq_file = open(file_name, "w+")
-with open('english.csv') as csv_file:
+cq_file = open(result_file, "w+")
+with open(source_file) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter='\n')
         for row in csv_reader:
             question = ''.join(row)
